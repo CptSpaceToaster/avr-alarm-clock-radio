@@ -628,7 +628,6 @@ void inline alarm_state() {
 		wd_clock = 0;
 	}
 	if(bns[0] || bns[2]) { // sleep
-		//TODO: alarm again after a length of time
 		bns[0] = bns[2] = false;
 		if (state==alarm_A) {
 			time_alarm_A.hour = time.hour;
@@ -714,7 +713,6 @@ void inline alarm_state() {
 				break;
 		}
 	}
-	//todo, volume control, stop the ramp speed, set the limit
 	if (wd_clock == 3599) {
 		if (state==alarm_A) {
 			alarm_A_went_off_today = true;
